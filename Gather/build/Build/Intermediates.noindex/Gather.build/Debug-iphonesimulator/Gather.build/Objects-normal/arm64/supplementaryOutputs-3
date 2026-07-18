@@ -1,0 +1,23 @@
+{
+  "/Users/hemantsharma/SWIFTHACK/Gather/Sources/Components/FilterChip.swift" : {
+    "const-values" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FilterChip.swiftconstvalues",
+    "dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FilterChip.d",
+    "diagnostics" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FilterChip.dia",
+    "object" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FilterChip.o",
+    "swift-dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FilterChip.swiftdeps"
+  },
+  "/Users/hemantsharma/SWIFTHACK/Gather/Sources/Services/FoundationModelService.swift" : {
+    "const-values" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FoundationModelService.swiftconstvalues",
+    "dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FoundationModelService.d",
+    "diagnostics" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FoundationModelService.dia",
+    "object" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FoundationModelService.o",
+    "swift-dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FoundationModelService.swiftdeps"
+  },
+  "/Users/hemantsharma/SWIFTHACK/Gather/Sources/Views/HomeView.swift" : {
+    "const-values" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/HomeView.swiftconstvalues",
+    "dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/HomeView.d",
+    "diagnostics" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/HomeView.dia",
+    "object" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/HomeView.o",
+    "swift-dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/HomeView.swiftdeps"
+  }
+}

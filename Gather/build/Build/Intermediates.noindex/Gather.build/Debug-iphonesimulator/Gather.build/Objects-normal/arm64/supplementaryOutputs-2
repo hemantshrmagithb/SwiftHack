@@ -1,0 +1,23 @@
+{
+  "/Users/hemantsharma/SWIFTHACK/Gather/Sources/Components/ChecklistCategoryCard.swift" : {
+    "const-values" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/ChecklistCategoryCard.swiftconstvalues",
+    "dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/ChecklistCategoryCard.d",
+    "diagnostics" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/ChecklistCategoryCard.dia",
+    "object" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/ChecklistCategoryCard.o",
+    "swift-dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/ChecklistCategoryCard.swiftdeps"
+  },
+  "/Users/hemantsharma/SWIFTHACK/Gather/Sources/Components/FeatureCardView.swift" : {
+    "const-values" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FeatureCardView.swiftconstvalues",
+    "dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FeatureCardView.d",
+    "diagnostics" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FeatureCardView.dia",
+    "object" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FeatureCardView.o",
+    "swift-dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/FeatureCardView.swiftdeps"
+  },
+  "/Users/hemantsharma/SWIFTHACK/Gather/Sources/Views/EventDetailsView.swift" : {
+    "const-values" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/EventDetailsView.swiftconstvalues",
+    "dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/EventDetailsView.d",
+    "diagnostics" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/EventDetailsView.dia",
+    "object" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/EventDetailsView.o",
+    "swift-dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/EventDetailsView.swiftdeps"
+  }
+}

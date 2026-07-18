@@ -1,0 +1,23 @@
+{
+  "/Users/hemantsharma/SWIFTHACK/Gather/Sources/Models/Occasion.swift" : {
+    "const-values" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/Occasion.swiftconstvalues",
+    "dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/Occasion.d",
+    "diagnostics" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/Occasion.dia",
+    "object" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/Occasion.o",
+    "swift-dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/Occasion.swiftdeps"
+  },
+  "/Users/hemantsharma/SWIFTHACK/Gather/Sources/Views/OccasionPlannerCoordinator.swift" : {
+    "const-values" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/OccasionPlannerCoordinator.swiftconstvalues",
+    "dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/OccasionPlannerCoordinator.d",
+    "diagnostics" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/OccasionPlannerCoordinator.dia",
+    "object" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/OccasionPlannerCoordinator.o",
+    "swift-dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/OccasionPlannerCoordinator.swiftdeps"
+  },
+  "/Users/hemantsharma/SWIFTHACK/Gather/Sources/Views/OccasionSelectionView.swift" : {
+    "const-values" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/OccasionSelectionView.swiftconstvalues",
+    "dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/OccasionSelectionView.d",
+    "diagnostics" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/OccasionSelectionView.dia",
+    "object" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/OccasionSelectionView.o",
+    "swift-dependencies" : "/Users/hemantsharma/SWIFTHACK/Gather/build/Build/Intermediates.noindex/Gather.build/Debug-iphonesimulator/Gather.build/Objects-normal/arm64/OccasionSelectionView.swiftdeps"
+  }
+}
