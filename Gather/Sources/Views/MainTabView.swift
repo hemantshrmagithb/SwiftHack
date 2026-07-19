@@ -26,7 +26,7 @@ struct MainTabView: View {
                 }
                 .tag(2)
             
-            SmartFridgeCoordinator()
+            SmartFridgeCoordinator(selectedTab: $selectedTab)
                 .tabItem {
                     Image(systemName: "refrigerator")
                     Text("Fridge")

@@ -3,6 +3,7 @@ import SwiftUI
 struct SmartFridgeCoordinator: View {
     @State private var viewModel = SmartFridgeViewModel()
     @Environment(\.dismiss) var dismiss
+    @Binding var selectedTab: Int
     
     var body: some View {
         NavigationStack {
@@ -21,7 +22,15 @@ struct SmartFridgeCoordinator: View {
                 case .checkoutSummary:
                     CheckoutSummaryView(viewModel: viewModel)
                 case .checkoutConfirmation:
-                    CheckoutConfirmationView(onDismiss: { dismiss() })
+                    CheckoutConfirmationView(
+                        onContinueShopping: {
+                            viewModel.resetForNewShopping()
+                        },
+                        onBackToHome: {
+                            viewModel.resetCompletely()
+                            selectedTab = 0 // Go to App Home
+                        }
+                    )
                 }
             }
             .navigationBarTitleDisplayMode(.inline)

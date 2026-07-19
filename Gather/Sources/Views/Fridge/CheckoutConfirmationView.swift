@@ -1,7 +1,9 @@
 import SwiftUI
 
 struct CheckoutConfirmationView: View {
-    var onDismiss: () -> Void
+    var onContinueShopping: () -> Void
+    var onBackToHome: () -> Void
+    
     @State private var animate = false
     
     var body: some View {
@@ -39,7 +41,11 @@ struct CheckoutConfirmationView: View {
             Spacer()
             
             VStack(spacing: 16) {
-                Button(action: onDismiss) {
+                Button(action: {
+                    let generator = UIImpactFeedbackGenerator(style: .light)
+                    generator.impactOccurred()
+                    onContinueShopping()
+                }) {
                     Text("Continue Shopping")
                         .font(.headline)
                         .foregroundColor(Color(UIColor.systemBackground))
@@ -49,7 +55,11 @@ struct CheckoutConfirmationView: View {
                         .cornerRadius(16)
                 }
                 
-                Button(action: onDismiss) {
+                Button(action: {
+                    let generator = UIImpactFeedbackGenerator(style: .medium)
+                    generator.impactOccurred()
+                    onBackToHome()
+                }) {
                     Text("Back to Home")
                         .font(.headline)
                         .foregroundColor(.primaryText)
@@ -69,6 +79,10 @@ struct CheckoutConfirmationView: View {
         .background(Color.appBackground.edgesIgnoringSafeArea(.all))
         .navigationBarHidden(true)
         .onAppear {
+            // Success haptic
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
+            
             withAnimation(.easeOut(duration: 1.5).repeatForever(autoreverses: false)) {
                 animate = true
             }

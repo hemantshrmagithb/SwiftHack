@@ -129,4 +129,26 @@ class SmartFridgeViewModel {
             monthlyEssentials[index].isSelected.toggle()
         }
     }
+    
+    // MARK: - State Resets
+    
+    func resetForNewShopping() {
+        // Clear checkout state, return to Fridge Home
+        checkoutSummary = nil
+        currentStep = .pantryOverview
+        
+        // Reset selections to default for next restock
+        for index in weeklyEssentials.indices {
+            weeklyEssentials[index].isSelected = true
+        }
+        for index in monthlyEssentials.indices {
+            monthlyEssentials[index].isSelected = true
+        }
+    }
+    
+    func resetCompletely() {
+        // Full reset, going back to welcome screen logic
+        resetForNewShopping()
+        currentStep = .welcome
+    }
 }
