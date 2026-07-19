@@ -21,6 +21,8 @@ struct OccasionPlannerCoordinator: View {
                         AIPlanView(viewModel: viewModel, onDismiss: { dismiss() })
                     case .cartSummary:
                         CartSummaryView(viewModel: viewModel, onDismiss: { dismiss() })
+                    case .success:
+                        OccasionSuccessView(viewModel: viewModel, onDismiss: { dismiss() })
                     }
                 }
         }

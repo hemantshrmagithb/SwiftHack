@@ -8,6 +8,7 @@ enum PlanningStep: Hashable {
     case animating
     case planReady
     case cartSummary
+    case success
 }
 
 @Observable
@@ -111,5 +112,23 @@ class PlanningViewModel {
                 }
             }
         }
+    }
+    
+    func placeOrder() async throws {
+        // Mock async order logic simulating a network request
+        try await Task.sleep(nanoseconds: 1_500_000_000)
+        
+        await MainActor.run {
+            // Reset state
+            self.plan = nil
+            // In a real app we'd keep history, but we just clear the current flow
+            self.path = [.success]
+        }
+    }
+    
+    func resetFlow() {
+        self.plan = nil
+        self.selectedOccasionType = nil
+        self.path = []
     }
 }

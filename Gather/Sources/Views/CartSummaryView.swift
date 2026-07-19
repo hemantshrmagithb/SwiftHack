@@ -1,8 +1,11 @@
 import SwiftUI
 
 struct CartSummaryView: View {
-    var viewModel: PlanningViewModel
+    @Bindable var viewModel: PlanningViewModel
     var onDismiss: () -> Void
+    
+    @State private var isPlacingOrder = false
+    @State private var showError = false
     
     var allProducts: [ShoppingProduct] {
         let rawProducts = viewModel.plan?.shoppingCategories.flatMap { $0.products } ?? []
@@ -154,27 +157,51 @@ struct CartSummaryView: View {
             // Checkout Button
             VStack {
                 Button(action: {
-                    // In a real app, this would trigger payment/checkout flow.
-                    // For the hackathon, we can just dismiss the flow to signify completion.
-                    onDismiss()
+                    guard totalPrice > 0 else { return }
+                    
+                    let generator = UIImpactFeedbackGenerator(style: .medium)
+                    generator.impactOccurred()
+                    
+                    isPlacingOrder = true
+                    
+                    Task {
+                        do {
+                            try await viewModel.placeOrder()
+                            isPlacingOrder = false
+                            // Success navigation happens via ViewModel resetting path to [.success]
+                        } catch {
+                            isPlacingOrder = false
+                            showError = true
+                        }
+                    }
                 }) {
                     HStack {
-                        VStack(alignment: .leading) {
-                            Text(String(format: "₹%.2f", totalPrice + 25.0))
+                        if isPlacingOrder {
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle(tint: Color(UIColor.systemBackground)))
+                            Text("Placing Order...")
                                 .font(.headline)
-                            Text("TOTAL")
-                                .font(.caption)
+                                .foregroundColor(Color(UIColor.systemBackground))
+                                .padding(.leading, 8)
+                        } else {
+                            VStack(alignment: .leading) {
+                                Text(String(format: "₹%.2f", totalPrice + 25.0))
+                                    .font(.headline)
+                                Text("TOTAL")
+                                    .font(.caption)
+                            }
+                            Spacer()
+                            Text("Place Order")
+                                .font(.headline)
+                            Image(systemName: "chevron.right")
                         }
-                        Spacer()
-                        Text("Place Order")
-                            .font(.headline)
-                        Image(systemName: "chevron.right")
                     }
                     .foregroundColor(Color(UIColor.systemBackground))
                     .padding()
-                    .background(Color.gatherGreen)
+                    .background(totalPrice > 0 ? Color.gatherGreen : Color.gray)
                     .cornerRadius(16)
                 }
+                .disabled(isPlacingOrder || totalPrice <= 0)
                 .padding(.horizontal)
                 .padding(.bottom, 32)
             }
@@ -183,5 +210,10 @@ struct CartSummaryView: View {
         }
         .background(Color.appBackground.edgesIgnoringSafeArea(.all))
         .navigationBarHidden(true)
+        .alert("Couldn't Place Order", isPresented: $showError) {
+            Button("Try Again", role: .cancel) {}
+        } message: {
+            Text("Please try again.")
+        }
     }
 }

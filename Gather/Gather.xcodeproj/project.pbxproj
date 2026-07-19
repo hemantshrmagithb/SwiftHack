@@ -75,6 +75,7 @@
 		B028BBF7A73C487A67437A34 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4F6862B43DAEBF8A12CB2 /* ExpenseViewModel.swift */; };
 		B5EC0C90AB9BB384B48B74D9 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A8D88828E97D5C409ACB6C /* SettingsSection.swift */; };
 		B94A6AB46A8907DF90BD0CA3 /* FeatureCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351ED8EA7C7F88E02074E936 /* FeatureCardView.swift */; };
+		BA4525A71FF83CCF6AAB7F8E /* OccasionSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FFB9B4FA0772DD7D60A8CB /* OccasionSuccessView.swift */; };
 		BB8B7512A1832E1E37BE5FFF /* QuickActionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE63F440820C472ABE521F7 /* QuickActionsRow.swift */; };
 		BDD5005EABBAE78BCA2FAC58 /* ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28792BF9C371E8936B6A47CF /* ProfileModels.swift */; };
 		C35B4CE5EA29F34EAE47957C /* TopDealCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812496FE08A85BACC0DFDAB5 /* TopDealCardView.swift */; };
@@ -96,6 +97,7 @@
 		0C30D092DB4F757F84F4E850 /* Gather.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Gather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C5C5DFB959B0130AE8EF2FD /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		0E892EB6B9142CBC1648509B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		11FFB9B4FA0772DD7D60A8CB /* OccasionSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccasionSuccessView.swift; sourceTree = "<group>"; };
 		17BC140926809D4132FE8FCF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1BD9B8C66A4C0008E52902B9 /* EventDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsView.swift; sourceTree = "<group>"; };
 		1DE63F440820C472ABE521F7 /* QuickActionsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickActionsRow.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				28FC14E733B23D2E946F53AC /* MainTabView.swift */,
 				2D2E198CB068CB0922035FEA /* OccasionPlannerCoordinator.swift */,
 				6247ECB09579CB7B4A9B255F /* OccasionSelectionView.swift */,
+				11FFB9B4FA0772DD7D60A8CB /* OccasionSuccessView.swift */,
 				AD9E026B6F3A8B652DBB76A5 /* OccasionWelcomeView.swift */,
 				6848873126F67A24635147AD /* PlaceholderViews.swift */,
 				89348685E37E6D70245A8706 /* PlanningAnimationView.swift */,
@@ -389,7 +392,7 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		"TEMP_FF071E7B-83BD-4A04-AE03-B541C583D1E0" /* Resources */ = {
+		"TEMP_F0AE59FE-3F23-4721-B61E-54279D05E2F4" /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -493,6 +496,7 @@
 				61DF0F43695467980364AAA1 /* OccasionPlan.swift in Sources */,
 				C638ED32958182CB5B8FFD12 /* OccasionPlannerCoordinator.swift in Sources */,
 				4F0CE8BEC9D07D1245D2D788 /* OccasionSelectionView.swift in Sources */,
+				BA4525A71FF83CCF6AAB7F8E /* OccasionSuccessView.swift in Sources */,
 				C5B0D08EDB6BE35D144C2BA6 /* OccasionTypeCard.swift in Sources */,
 				81EA334A685328FED00CCC14 /* OccasionWelcomeView.swift in Sources */,
 				2B43529E60A61A3FE8F17126 /* PantryAnalysisService.swift in Sources */,
