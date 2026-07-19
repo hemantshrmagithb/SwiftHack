@@ -4,10 +4,20 @@ struct HomeCommandHeaderView: View {
     let name: String
     let address: String
     
+    private var greeting: String {
+        let hour = Calendar.current.component(.hour, from: Date())
+        switch hour {
+        case 5..<12: return "Good Morning,"
+        case 12..<17: return "Good Afternoon,"
+        case 17..<21: return "Good Evening,"
+        default: return "Good Night,"
+        }
+    }
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 6) {
-                Text("Good Morning,")
+                Text(greeting)
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.primaryText)
@@ -58,8 +68,12 @@ struct HomeCommandHeaderView: View {
 
 struct CircleButton: View {
     let icon: String
+    @State private var showAlert = false
+    
     var body: some View {
-        Button(action: {}) {
+        Button(action: {
+            showAlert = true
+        }) {
             Circle()
                 .fill(Color.cardBackground)
                 .frame(width: 44, height: 44)
@@ -67,6 +81,11 @@ struct CircleButton: View {
                     Image(systemName: icon)
                         .foregroundColor(.primaryText)
                 )
+        }
+        .alert(icon == "bell" ? "Notifications" : "Wallet", isPresented: $showAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(icon == "bell" ? "No new notifications" : "Wallet balance: ₹2,450")
         }
     }
 }

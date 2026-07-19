@@ -47,7 +47,7 @@ class HomeViewModel {
                 
                 self.recommendations = [
                     Recommendation(title: "Seasonal Groceries", iconSystemName: "carrot", color: .orange),
-                    Recommendation(title: "Healthy Picks", iconSystemName: "apple.logo", color: .red) // Using apple.logo as placeholder for apples/groceries
+                    Recommendation(title: "Healthy Picks", iconSystemName: "leaf.fill", color: .green)
                 ]
                 
                 self.isLoading = false

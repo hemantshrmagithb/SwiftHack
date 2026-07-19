@@ -3,6 +3,7 @@ import SwiftUI
 struct ExpenseHomeView: View {
     var viewModel: ExpenseViewModel
     var onDismiss: () -> Void
+    @State private var showJoinAlert = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -25,7 +26,7 @@ struct ExpenseHomeView: View {
                     .frame(width: 300, height: 260)
                     .shadow(color: Color.black.opacity(0.05), radius: 10, x: 0, y: 5)
                 
-                // Group of avatars mock (from Image 1 in request)
+                // Group of avatars mock
                 HStack(spacing: -10) {
                     Circle().fill(Color.red).frame(width: 40, height: 40)
                     Circle().fill(Color.blue).frame(width: 50, height: 50).offset(y: -10)
@@ -63,7 +64,9 @@ struct ExpenseHomeView: View {
                         .cornerRadius(12)
                 }
                 
-                Button(action: {}) {
+                Button(action: {
+                    showJoinAlert = true
+                }) {
                     Text("Join Existing Group")
                         .font(.headline)
                         .foregroundColor(.primaryText)
@@ -82,5 +85,10 @@ struct ExpenseHomeView: View {
         }
         .background(Color.appBackground.edgesIgnoringSafeArea(.all))
         .navigationBarHidden(true)
+        .alert("Join Group", isPresented: $showJoinAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Share your invite link with friends to join your group. They can scan the QR code or click the link to join.")
+        }
     }
 }

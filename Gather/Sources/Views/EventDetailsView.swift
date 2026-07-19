@@ -88,7 +88,7 @@ struct EventDetailsView: View {
                                 .font(.headline)
                                 .foregroundColor(.primaryText)
                             Spacer()
-                            Text(String(format: "$%.0f", viewModel.budgetEstimate))
+                            Text(String(format: "₹%.0f", viewModel.budgetEstimate))
                                 .foregroundColor(.secondaryText)
                         }
                         
@@ -129,12 +129,12 @@ struct EventDetailsView: View {
                     
                     HStack {
                         VStack(alignment: .leading, spacing: 4) {
-                            Text("Oct 28 • Evening")
+                            Text(viewModel.eventDate.formatted(date: .abbreviated, time: .omitted) + " • " + viewModel.eventTime.formatted(date: .omitted, time: .shortened))
                                 .font(.caption)
                                 .foregroundColor(.secondaryText)
                             
                             HStack(alignment: .firstTextBaseline) {
-                                Text("68°")
+                                Text("28°C")
                                     .font(.system(size: 32, weight: .bold))
                                     .foregroundColor(.primaryText)
                                 Text("Clear")
@@ -143,9 +143,9 @@ struct EventDetailsView: View {
                             }
                         }
                         Spacer()
-                        Image(systemName: "moon.fill")
+                        Image(systemName: Calendar.current.component(.hour, from: viewModel.eventTime) >= 18 ? "moon.fill" : "sun.max.fill")
                             .font(.system(size: 32))
-                            .foregroundColor(.secondaryText)
+                            .foregroundColor(Calendar.current.component(.hour, from: viewModel.eventTime) >= 18 ? .secondaryText : .orange)
                     }
                 }
                 .padding(16)
@@ -162,9 +162,7 @@ struct EventDetailsView: View {
             VStack {
                 Spacer()
                 Button(action: {
-                    withAnimation(.easeInOut) {
-                        viewModel.nextStep()
-                    }
+                    viewModel.generatePlan()
                 }) {
                     Text("Plan Celebration")
                         .font(.headline)

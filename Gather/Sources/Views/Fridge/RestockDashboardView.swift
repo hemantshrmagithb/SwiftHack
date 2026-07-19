@@ -2,6 +2,7 @@ import SwiftUI
 
 struct RestockDashboardView: View {
     @Bindable var viewModel: SmartFridgeViewModel
+    @State private var showCustomizeAlert = false
     
     let columns = [
         GridItem(.flexible(), spacing: 16),
@@ -43,7 +44,9 @@ struct RestockDashboardView: View {
                         .cornerRadius(16)
                     }
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        showCustomizeAlert = true
+                    }) {
                         HStack {
                             Image(systemName: "pencil")
                             Text("Customize List")
@@ -139,7 +142,14 @@ struct RestockDashboardView: View {
                         }
                     }
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        // Select all weekly essentials
+                        for item in viewModel.weeklyEssentials {
+                            if !item.isSelected {
+                                viewModel.toggleWeeklyEssential(item)
+                            }
+                        }
+                    }) {
                         Text("VIEW ALL WEEKLY")
                             .font(.caption)
                             .fontWeight(.bold)
@@ -181,7 +191,14 @@ struct RestockDashboardView: View {
                         }
                     }
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        // Select all monthly essentials
+                        for item in viewModel.monthlyEssentials {
+                            if !item.isSelected {
+                                viewModel.toggleMonthlyEssential(item)
+                            }
+                        }
+                    }) {
                         Text("VIEW ALL MONTHLY")
                             .font(.caption)
                             .fontWeight(.bold)
@@ -201,5 +218,10 @@ struct RestockDashboardView: View {
         }
         .background(Color.appBackground.edgesIgnoringSafeArea(.all))
         .navigationBarHidden(true)
+        .alert("Customize List", isPresented: $showCustomizeAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Use the checkboxes in the Weekly and Monthly sections to customize which items to include in your restock order.")
+        }
     }
 }

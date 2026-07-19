@@ -21,6 +21,9 @@ extension Color {
     
     // Green accent
     static let gatherGreen = Color(hex: "#00C853")
+    
+    // Orange accent
+    static let gatherOrange = Color(hex: "#FF9F0A")
 }
 
 // Helper to use hex codes

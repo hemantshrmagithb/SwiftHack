@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SettlementSummaryView: View {
-    var viewModel: ExpenseViewModel
+    @Bindable var viewModel: ExpenseViewModel
     var onDismiss: () -> Void
     
     var body: some View {
@@ -29,7 +29,7 @@ struct SettlementSummaryView: View {
                                 .font(.caption)
                                 .fontWeight(.bold)
                                 .foregroundColor(.primaryText)
-                            Text(String(format: "$%.2f", recommendation.totalAmount))
+                            Text(String(format: "₹%.2f", recommendation.totalAmount))
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.primaryText)
@@ -44,7 +44,7 @@ struct SettlementSummaryView: View {
                                 .font(.caption)
                                 .fontWeight(.bold)
                                 .foregroundColor(.primaryText)
-                            Text(String(format: "$%.2f", recommendation.remainingAmount))
+                            Text(String(format: "₹%.2f", recommendation.remainingAmount))
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.red) // Assuming red for remaining
@@ -103,7 +103,7 @@ struct SettlementSummaryView: View {
             VStack(spacing: 12) {
                 Spacer()
                 Button(action: {
-                    // Continue shopping action
+                    viewModel.currentStep = .shoppingRoom
                 }) {
                     Text("Continue Shopping")
                         .font(.headline)

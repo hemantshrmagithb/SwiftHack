@@ -2,6 +2,8 @@ import SwiftUI
 
 struct SharedShoppingRoomView: View {
     @Bindable var viewModel: ExpenseViewModel
+    @State private var showAddItemAlert = false
+    @State private var newItemName = ""
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -71,7 +73,9 @@ struct SharedShoppingRoomView: View {
                                 .fontWeight(.bold)
                                 .foregroundColor(.primaryText)
                             Spacer()
-                            Button(action: {}) {
+                            Button(action: {
+                                showAddItemAlert = true
+                            }) {
                                 Text("Add Item")
                                     .font(.caption)
                                     .fontWeight(.bold)
@@ -147,5 +151,19 @@ struct SharedShoppingRoomView: View {
             }
             , alignment: .bottom
         )
+        .alert("Add Item", isPresented: $showAddItemAlert) {
+            TextField("Item name", text: $newItemName)
+            Button("Add") {
+                if !newItemName.isEmpty {
+                    viewModel.addItem(name: newItemName)
+                    newItemName = ""
+                }
+            }
+            Button("Cancel", role: .cancel) {
+                newItemName = ""
+            }
+        } message: {
+            Text("Enter the name of the item to add to the shared cart.")
+        }
     }
 }

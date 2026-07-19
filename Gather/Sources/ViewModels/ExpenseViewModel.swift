@@ -89,4 +89,12 @@ class ExpenseViewModel {
         guard let index = group?.items.firstIndex(where: { $0.id == item.id }) else { return }
         group?.items[index].isChecked.toggle()
     }
+    
+    func addItem(name: String) {
+        let newItem = ShoppingItem(name: name, addedBy: .currentUser, claimedBy: .currentUser, isChecked: false)
+        group?.items.append(newItem)
+        // Add an activity event for the new item
+        let event = ActivityEvent(member: .currentUser, action: "added", target: name, timestamp: Date())
+        group?.activityFeed.insert(event, at: 0)
+    }
 }

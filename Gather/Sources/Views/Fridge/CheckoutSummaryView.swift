@@ -34,7 +34,7 @@ struct CheckoutSummaryView: View {
                                 Text("Estimated Budget")
                                     .foregroundColor(.secondaryText)
                                 Spacer()
-                                Text(String(format: "$%.2f", summary.estimatedBudget))
+                                Text(String(format: "₹%.2f", summary.estimatedBudget))
                                     .fontWeight(.bold)
                             }
                             Divider()
@@ -69,7 +69,7 @@ struct CheckoutSummaryView: View {
                                 Text("Suggested Savings")
                                     .foregroundColor(.secondaryText)
                                 Spacer()
-                                Text(String(format: "-$%.2f", abs(summary.suggestedSavings)))
+                                Text(String(format: "-₹%.2f", abs(summary.suggestedSavings)))
                                     .fontWeight(.bold)
                                     .foregroundColor(.gatherGreen)
                             }

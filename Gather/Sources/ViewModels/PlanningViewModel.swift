@@ -1,17 +1,18 @@
 import Foundation
 import Observation
 
-enum PlanningStep {
+enum PlanningStep: Hashable {
     case welcome
     case selection
     case details
     case animating
     case planReady
+    case cartSummary
 }
 
 @Observable
 class PlanningViewModel {
-    var currentStep: PlanningStep = .welcome
+    var path: [PlanningStep] = []
     
     var selectedOccasionType: OccasionType?
     
@@ -25,37 +26,30 @@ class PlanningViewModel {
     var selectedDiets: Set<DietaryPreference> = [.nonVeg]
     
     // AI Generated Plan
-    var plan: CelebrationPlan?
+    var plan: OccasionPlan?
     var isGenerating: Bool = false
+    
+    // Sequential Animation State
+    var reasoningStateIndex: Int = 0
+    let reasoningStates: [String] = [
+        "Understanding celebration...",
+        "Estimating guest requirements...",
+        "Calculating quantities...",
+        "Optimizing budget...",
+        "Building shopping checklist...",
+        "Generating timeline...",
+        "Preparing recommendations...",
+        "Finalizing shopping cart..."
+    ]
+    var currentReasoningState: String {
+        guard reasoningStateIndex < reasoningStates.count else { return "Almost done..." }
+        return reasoningStates[reasoningStateIndex]
+    }
     
     private let aiService: FoundationModelServiceProtocol
     
-    init(aiService: FoundationModelServiceProtocol = MockFoundationModelService()) {
+    init(aiService: FoundationModelServiceProtocol = FoundationModelService()) {
         self.aiService = aiService
-    }
-    
-    func nextStep() {
-        switch currentStep {
-        case .welcome:
-            currentStep = .selection
-        case .selection:
-            if selectedOccasionType != nil {
-                currentStep = .details
-            }
-        case .details:
-            generatePlan()
-        case .animating, .planReady:
-            break
-        }
-    }
-    
-    func previousStep() {
-        switch currentStep {
-        case .selection: currentStep = .welcome
-        case .details: currentStep = .selection
-        case .animating, .planReady: currentStep = .details
-        case .welcome: break
-        }
     }
     
     func toggleDietary(_ diet: DietaryPreference) {
@@ -80,22 +74,40 @@ class PlanningViewModel {
             dietaryPreferences: Array(selectedDiets)
         )
         
-        currentStep = .animating
+        path.append(.animating)
         isGenerating = true
+        reasoningStateIndex = 0
         
         Task {
+            // Start the sequential animation timer in a separate task
+            let animationTask = Task {
+                for _ in 0..<reasoningStates.count {
+                    try? await Task.sleep(nanoseconds: 600_000_000)
+                    if Task.isCancelled { break }
+                    await MainActor.run {
+                        if self.reasoningStateIndex < self.reasoningStates.count - 1 {
+                            self.reasoningStateIndex += 1
+                        }
+                    }
+                }
+            }
+            
             do {
                 let generatedPlan = try await aiService.generatePlan(for: template)
+                animationTask.cancel()
+                
                 await MainActor.run {
                     self.plan = generatedPlan
                     self.isGenerating = false
-                    self.currentStep = .planReady
+                    self.path.append(.planReady)
                 }
             } catch {
+                animationTask.cancel()
                 await MainActor.run {
                     self.isGenerating = false
-                    // Handle error state if needed
-                    self.currentStep = .details 
+                    if !self.path.isEmpty {
+                        self.path.removeLast() // go back to details on error
+                    }
                 }
             }
         }

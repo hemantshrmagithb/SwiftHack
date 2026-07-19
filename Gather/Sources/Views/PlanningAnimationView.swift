@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct PlanningAnimationView: View {
+    var viewModel: PlanningViewModel
+    
     @State private var scale: CGFloat = 0.8
     @State private var opacity: Double = 0.5
     
@@ -29,16 +31,24 @@ struct PlanningAnimationView: View {
                 }
             }
             
-            VStack(spacing: 16) {
-                Text("Creating your celebration\\nplan...")
-                    .font(.system(size: 28, weight: .bold))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.primaryText)
+            VStack(spacing: 24) {
+                Image(systemName: "sparkle.magnifyingglass")
+                    .font(.system(size: 40))
+                    .foregroundColor(.gatherPink)
                 
-                Text("Gathering fresh ingredients and\\nparty essentials...")
-                    .font(.body)
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.secondaryText)
+                VStack(spacing: 8) {
+                    Text("AI is Reasoning")
+                        .font(.system(size: 28, weight: .bold))
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.primaryText)
+                    
+                    Text(viewModel.currentReasoningState)
+                        .font(.body)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.secondaryText)
+                        .transition(.opacity)
+                        .animation(.easeInOut, value: viewModel.currentReasoningState)
+                }
             }
             .padding(.horizontal, 40)
         }

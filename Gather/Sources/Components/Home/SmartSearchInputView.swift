@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SmartSearchInputView: View {
     @Binding var text: String
+    @State private var showVoiceAlert = false
     
     let suggestions = ["Milk", "Organic Eggs", "Bread", "Coffee"]
     
@@ -19,7 +20,9 @@ struct SmartSearchInputView: View {
                 
                 Spacer()
                 
-                Button(action: {}) {
+                Button(action: {
+                    showVoiceAlert = true
+                }) {
                     Image(systemName: "mic")
                         .foregroundColor(.primaryText)
                         .font(.title3)
@@ -49,6 +52,11 @@ struct SmartSearchInputView: View {
                     }
                 }
             }
+        }
+        .alert("Voice Search", isPresented: $showVoiceAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Voice search will be available in a future update. Try typing your search instead!")
         }
     }
 }

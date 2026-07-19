@@ -23,11 +23,12 @@ struct AIPlanView: View {
                         .background(Color.primaryText.opacity(0.05))
                         .cornerRadius(12)
                         
-                        Text("Everything is set.")
+                        Text(plan.title)
                             .font(.system(size: 32, weight: .bold))
+                            .multilineTextAlignment(.center)
                             .foregroundColor(.primaryText)
                         
-                        Text("We've crafted a seamless timeline and optimized checklist for your occasion. Review the details below.")
+                        Text("We've crafted a seamless timeline and optimized checklist for your occasion.")
                             .font(.body)
                             .multilineTextAlignment(.center)
                             .foregroundColor(.secondaryText)
@@ -36,6 +37,20 @@ struct AIPlanView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.top, 16)
                     
+                    // Strategy Summary
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text("Strategy")
+                            .font(.headline)
+                            .padding(.horizontal, 24)
+                        
+                        VStack(spacing: 12) {
+                            StrategyRow(icon: "fork.knife", title: "Food", description: plan.summary.foodStrategy)
+                            StrategyRow(icon: "wineglass", title: "Drinks", description: plan.summary.drinkStrategy)
+                            StrategyRow(icon: "birthday.cake", title: "Desserts", description: plan.summary.dessertRecommendation)
+                        }
+                        .padding(.horizontal, 24)
+                    }
+                    
                     // Event Timeline
                     VStack(alignment: .leading, spacing: 16) {
                         HStack {
@@ -43,12 +58,6 @@ struct AIPlanView: View {
                             Text("Event Timeline")
                                 .font(.headline)
                             Spacer()
-                            Text("Sat, Aug 12") // Ideally formatted from viewModel.eventDate
-                                .font(.caption)
-                                .padding(.horizontal, 8)
-                                .padding(.vertical, 4)
-                                .background(Color.appBackground)
-                                .cornerRadius(8)
                         }
                         .foregroundColor(.primaryText)
                         .padding(.horizontal, 24)
@@ -64,130 +73,145 @@ struct AIPlanView: View {
                         .padding(.horizontal, 24)
                     }
                     
-                    // Optimized Checklist
+                    // AI Reasoning
+                    AIReasoningCardView(reasoningItems: plan.aiReasoning)
+                        .padding(.horizontal)
+                    
+                    // Shopping Categories
                     VStack(alignment: .leading, spacing: 16) {
-                        HStack {
-                            Text("Optimized Checklist")
-                                .font(.headline)
-                                .foregroundColor(.primaryText)
-                            Spacer()
-                            Image(systemName: "line.3.horizontal.decrease")
-                                .foregroundColor(.secondaryText)
-                        }
-                        .padding(.horizontal, 24)
+                        Text("Shopping List")
+                            .font(.headline)
+                            .padding(.horizontal, 24)
                         
-                        let columns = [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)]
-                        LazyVGrid(columns: columns, spacing: 16) {
-                            ForEach(plan.checklist) { category in
-                                ChecklistCategoryCard(category: category)
+                        ForEach(plan.shoppingCategories) { category in
+                            VStack(alignment: .leading, spacing: 8) {
+                                HStack {
+                                    Image(systemName: category.iconName)
+                                    Text(category.name)
+                                        .font(.subheadline).bold()
+                                    Spacer()
+                                    Text("\\(category.products.count) items")
+                                        .font(.caption)
+                                        .foregroundColor(.secondaryText)
+                                }
+                                .padding(.bottom, 4)
+                                
+                                ForEach(category.products) { product in
+                                    HStack {
+                                        Text(product.name)
+                                            .font(.subheadline)
+                                        Spacer()
+                                        Text(product.estimatedQuantity)
+                                            .font(.caption)
+                                            .foregroundColor(.secondaryText)
+                                    }
+                                    .padding(.vertical, 4)
+                                }
+                            }
+                            .padding(16)
+                            .background(Color.cardBackground)
+                            .cornerRadius(16)
+                            .padding(.horizontal, 24)
+                        }
+                    }
+                    
+                    // Action Checklist
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text("Action Checklist")
+                            .font(.headline)
+                            .padding(.horizontal, 24)
+                        
+                        VStack(alignment: .leading, spacing: 12) {
+                            ForEach(plan.checklist) { item in
+                                HStack(alignment: .top, spacing: 12) {
+                                    Image(systemName: item.isEssential ? "exclamationmark.circle.fill" : "circle")
+                                        .foregroundColor(item.isEssential ? .gatherOrange : .secondaryText)
+                                    Text(item.task)
+                                        .font(.subheadline)
+                                    Spacer()
+                                }
                             }
                         }
+                        .padding(16)
+                        .background(Color.cardBackground)
+                        .cornerRadius(16)
                         .padding(.horizontal, 24)
                     }
                     
-                    // Image Placeholder
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(Color.gatherLightPink)
-                        .frame(height: 200)
-                        .overlay(
-                            Image(systemName: "photo")
-                                .font(.system(size: 40))
-                                .foregroundColor(.gatherPink.opacity(0.5))
-                        )
-                        .padding(.horizontal, 24)
+                    // Premium Upgrades
+                    if !plan.premiumUpgrades.isEmpty {
+                        VStack(alignment: .leading, spacing: 16) {
+                            Text("Premium Upgrades")
+                                .font(.headline)
+                                .padding(.horizontal, 24)
+                            
+                            VStack(alignment: .leading, spacing: 12) {
+                                ForEach(plan.premiumUpgrades, id: \.self) { upgrade in
+                                    HStack {
+                                        Image(systemName: "star.fill")
+                                            .foregroundColor(.yellow)
+                                        Text(upgrade)
+                                            .font(.subheadline)
+                                        Spacer()
+                                    }
+                                }
+                            }
+                            .padding(16)
+                            .background(Color.cardBackground)
+                            .cornerRadius(16)
+                            .padding(.horizontal, 24)
+                        }
+                    }
+                    
+                    // Warnings & Tips
+                    VStack(alignment: .leading, spacing: 16) {
+                        ForEach(plan.warnings, id: \.self) { warning in
+                            HStack(alignment: .top, spacing: 16) {
+                                Image(systemName: "exclamationmark.triangle")
+                                    .foregroundColor(.gatherOrange)
+                                Text(warning)
+                                    .font(.subheadline)
+                                Spacer()
+                            }
+                            .padding(16)
+                            .background(Color.cardBackground)
+                            .cornerRadius(16)
+                        }
+                        
+                        HStack(alignment: .top, spacing: 16) {
+                            Image(systemName: "leaf")
+                                .foregroundColor(.gatherGreen)
+                            Text(plan.summary.wasteReductionTip)
+                                .font(.subheadline)
+                            Spacer()
+                        }
+                        .padding(16)
+                        .background(Color.cardBackground)
+                        .cornerRadius(16)
+                    }
+                    .padding(.horizontal, 24)
                     
                     // Budget Card
                     VStack(alignment: .leading, spacing: 16) {
-                        Text("TOTAL ESTIMATED BUDGET")
+                        Text("ESTIMATED BUDGET")
                             .font(.caption)
                             .fontWeight(.bold)
                             .foregroundColor(.gray)
                         
-                        Text(String(format: "$%.2f", plan.totalBudget))
+                        Text(String(format: "₹%.2f", plan.totalEstimatedBudget))
                             .font(.system(size: 40, weight: .bold))
                             .foregroundColor(Color(UIColor.systemBackground))
                         
                         Divider().background(Color.gray.opacity(0.5))
                         
                         HStack {
-                            Text("Groceries")
+                            Text("This is an AI estimation. Actual cart total may vary.")
+                                .font(.caption)
                                 .foregroundColor(.gray)
-                            Spacer()
-                            Text(String(format: "$%.2f", plan.groceriesBudget))
-                                .foregroundColor(Color(UIColor.systemBackground))
                         }
-                        .font(.subheadline)
-                        
-                        HStack {
-                            Text("Decor & Supplies")
-                                .foregroundColor(.gray)
-                            Spacer()
-                            Text(String(format: "$%.2f", plan.decorBudget))
-                                .foregroundColor(Color(UIColor.systemBackground))
-                        }
-                        .font(.subheadline)
-                        
-                        HStack {
-                            Text("Buffer (10%)")
-                                .foregroundColor(.gray)
-                            Spacer()
-                            Text(String(format: "$%.2f", plan.bufferBudget))
-                                .foregroundColor(Color(UIColor.systemBackground))
-                        }
-                        .font(.subheadline)
                     }
                     .padding(24)
                     .background(Color.primaryText)
-                    .cornerRadius(16)
-                    .padding(.horizontal, 24)
-                    
-                    // Waste Reduction Tip
-                    HStack(alignment: .top, spacing: 16) {
-                        Image(systemName: "leaf")
-                            .font(.system(size: 20))
-                            .foregroundColor(.gatherGreen)
-                            .padding(10)
-                            .background(Color.gatherGreen.opacity(0.1))
-                            .clipShape(Circle())
-                        
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text("Waste Reduction Tip")
-                                .font(.subheadline)
-                                .fontWeight(.bold)
-                                .foregroundColor(.primaryText)
-                            Text(plan.wasteReductionTip)
-                                .font(.caption)
-                                .foregroundColor(.secondaryText)
-                                .lineLimit(nil)
-                        }
-                    }
-                    .padding(16)
-                    .background(Color.cardBackground)
-                    .cornerRadius(16)
-                    .padding(.horizontal, 24)
-                    
-                    // Recommended Combos
-                    HStack(alignment: .top, spacing: 16) {
-                        Image(systemName: "link")
-                            .font(.system(size: 20))
-                            .foregroundColor(.primaryText)
-                            .padding(10)
-                            .background(Color.appBackground)
-                            .clipShape(Circle())
-                        
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text("Recommended Combos")
-                                .font(.subheadline)
-                                .fontWeight(.bold)
-                                .foregroundColor(.primaryText)
-                            Text(plan.recommendedCombo)
-                                .font(.caption)
-                                .foregroundColor(.secondaryText)
-                                .lineLimit(nil)
-                        }
-                    }
-                    .padding(16)
-                    .background(Color.cardBackground)
                     .cornerRadius(16)
                     .padding(.horizontal, 24)
                     
@@ -204,7 +228,10 @@ struct AIPlanView: View {
                 Spacer()
                 HStack(spacing: 16) {
                     Button(action: {
-                        viewModel.previousStep()
+                        // Go back to event details (pop animation + planReady)
+                        while viewModel.path.last != .details && !viewModel.path.isEmpty {
+                            viewModel.path.removeLast()
+                        }
                     }) {
                         Image(systemName: "pencil")
                             .font(.headline)
@@ -216,7 +243,7 @@ struct AIPlanView: View {
                     }
                     
                     Button(action: {
-                        onDismiss() // For now just dismiss
+                        viewModel.path.append(.cartSummary)
                     }) {
                         Text("Create My Cart")
                             .font(.headline)
@@ -239,3 +266,31 @@ struct AIPlanView: View {
         .navigationBarHidden(true)
     }
 }
+
+struct StrategyRow: View {
+    let icon: String
+    let title: String
+    let description: String
+    
+    var body: some View {
+        HStack(alignment: .top, spacing: 16) {
+            Image(systemName: icon)
+                .frame(width: 24, height: 24)
+                .foregroundColor(.primaryText)
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text(title)
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+                Text(description)
+                    .font(.caption)
+                    .foregroundColor(.secondaryText)
+            }
+            Spacer()
+        }
+        .padding(16)
+        .background(Color.cardBackground)
+        .cornerRadius(12)
+    }
+}
+

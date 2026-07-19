@@ -45,8 +45,8 @@ struct OccasionSelectionView: View {
             VStack {
                 Spacer()
                 Button(action: {
-                    withAnimation(.spring) {
-                        viewModel.nextStep()
+                    if viewModel.selectedOccasionType != nil {
+                        viewModel.path.append(.details)
                     }
                 }) {
                     Text("Next")

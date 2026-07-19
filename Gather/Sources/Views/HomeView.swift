@@ -28,8 +28,11 @@ struct HomeView: View {
                             
                             // AI Insight of the Day
                             if let insight = viewModel.insight {
-                                AIInsightCardView(insight: insight)
-                                    .padding(.horizontal)
+                                AIInsightCardView(insight: insight) {
+                                    // Navigate to Occasion Planner tab
+                                    selectedTab = 1
+                                }
+                                .padding(.horizontal)
                             }
                             
                             // Quick Actions
@@ -41,8 +44,14 @@ struct HomeView: View {
                             
                             // Continue Journey
                             if let journey = viewModel.currentJourney {
-                                JourneyResumeCard(journey: journey)
-                                    .padding(.horizontal)
+                                Button(action: {
+                                    // Navigate to Occasion Planner when tapping journey card
+                                    selectedTab = 1
+                                }) {
+                                    JourneyResumeCard(journey: journey)
+                                        .padding(.horizontal)
+                                }
+                                .buttonStyle(.plain)
                             }
                             
                             // Smart Recommendations

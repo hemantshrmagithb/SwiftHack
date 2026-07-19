@@ -2,6 +2,7 @@ import SwiftUI
 
 struct AIInsightCardView: View {
     let insight: AIInsight
+    var onCTATap: (() -> Void)? = nil
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -23,7 +24,9 @@ struct AIInsightCardView: View {
                     .lineSpacing(4)
             }
             
-            Button(action: {}) {
+            Button(action: {
+                onCTATap?()
+            }) {
                 Text(insight.ctaTitle)
                     .font(.caption)
                     .fontWeight(.bold)

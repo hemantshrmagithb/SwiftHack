@@ -31,12 +31,12 @@ struct SmartFridgeWelcomeView: View {
                     Spacer()
                     
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("Welcome\\nback to your\\nSmart Fridge.")
+                        Text("Welcome\nback to your\nSmart Fridge.")
                             .font(.system(size: 40, weight: .bold))
                             .foregroundColor(.primaryText)
                             .lineSpacing(4)
                         
-                        Text("Your groceries, organized\\nintelligently.")
+                        Text("Your groceries, organized\nintelligently.")
                             .font(.title3)
                             .foregroundColor(.secondaryText)
                     }

@@ -25,11 +25,13 @@
 		3222940174A2D5BB4BEFF904 /* SplitCalculationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F691447B8112D29C264E22A /* SplitCalculationService.swift */; };
 		3581364922DE471FD4AF45E2 /* TimelineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E25F8C8F4F0D6150178434 /* TimelineRow.swift */; };
 		35FE934DCD0D413341C5FF25 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2080FE529AF9AD88F83B9 /* Product.swift */; };
+		3766949A05E067B2D23F243E /* PromptBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04492CC1B92CB78E495F7FC1 /* PromptBuilder.swift */; };
 		3878D7B66FCB9EB8713E2B91 /* ExpenseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239477079701B13600A93BB /* ExpenseCoordinator.swift */; };
 		397B1C2AC9900E7CF3A7DDD4 /* PantryOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635CA95591B5CD92049305E1 /* PantryOverviewView.swift */; };
 		3BDD89F86EEB54B393A00B0F /* RecipeSuggestionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFBDE51F24438D1A10DD6DF /* RecipeSuggestionCard.swift */; };
 		3F543DCA7EAC299198D51075 /* RecommendationsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333495F651F0A5DE90F4EE50 /* RecommendationsGrid.swift */; };
 		3F738D9978D6A4AC78F27A2B /* HealthZoneCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F5F2481A559A9D78F8023 /* HealthZoneCard.swift */; };
+		408AED38DCB86E45F022C043 /* AIReasoningCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996E7459623DBE35C3408B3 /* AIReasoningCardView.swift */; };
 		44F72DCAFEC4392B083B4CB3 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6558E8633E5F6D90975828D5 /* MockDataService.swift */; };
 		456CDBBE137C5E11B2A43F0A /* PlanningAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89348685E37E6D70245A8706 /* PlanningAnimationView.swift */; };
 		4D7A310FD22343B2CCA4486E /* BannerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5E619E35D8B2FA6932CD88 /* BannerCardView.swift */; };
@@ -42,6 +44,7 @@
 		5FEEE204A4CEAC1767B1B630 /* EventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9B8C66A4C0008E52902B9 /* EventDetailsView.swift */; };
 		5FF205A1988DDC402A8714AD /* ActivityFeedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ED53118954B52E58E11F71 /* ActivityFeedRow.swift */; };
 		60347493F1625414456413DC /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC087A6BED31CE91D65053D /* CreateGroupView.swift */; };
+		61DF0F43695467980364AAA1 /* OccasionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A5A5C8A7071E6A0BFE9D15 /* OccasionPlan.swift */; };
 		628E36F9E3DB64885E53B50D /* FoundationModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E2A7FF56D2A96EE480BC2A /* FoundationModelService.swift */; };
 		6A4C18045422D13111E5D575 /* PlanningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F0601982A7CA04E0E1B24 /* PlanningViewModel.swift */; };
 		6C4B0335CD78C537E7E8F0F7 /* ExpenseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AD547CD208FB703FA8CD39 /* ExpenseModels.swift */; };
@@ -62,7 +65,6 @@
 		9008271BC62E4D0712F8A29E /* ShoppingListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438A7C49DE84A243AEF5BE74 /* ShoppingListRow.swift */; };
 		927094B8DD20AECA1767C1D0 /* FridgeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3538092710C880E05E4D71 /* FridgeModels.swift */; };
 		9552B344832B370F20D77440 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D17BC863B5585D6D88791B /* SearchBarView.swift */; };
-		96A93A97E1F2FB1D09C49D55 /* CelebrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62F392A698046DF62B86E2 /* CelebrationPlan.swift */; };
 		9792D2581E719E61EFE83007 /* AIInsightCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264308283106E2557578B6F /* AIInsightCardView.swift */; };
 		9E847D0F04A8E4D7CE3DDEA7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BC140926809D4132FE8FCF /* HomeView.swift */; };
 		A3201EB76C4164CE152F6733 /* Occasion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24434474EFD3C6C10A363A24 /* Occasion.swift */; };
@@ -79,8 +81,8 @@
 		C3EAE6A431B7238FAE50D83B /* AIInsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C116999A7BA56AB5606025C /* AIInsightsView.swift */; };
 		C5B0D08EDB6BE35D144C2BA6 /* OccasionTypeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9440B5DB3DB747024178A /* OccasionTypeCard.swift */; };
 		C638ED32958182CB5B8FFD12 /* OccasionPlannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2E198CB068CB0922035FEA /* OccasionPlannerCoordinator.swift */; };
-		CCC335407127B7BE38C86D53 /* ChecklistCategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34932DBB86FD0C2CBAE39BE /* ChecklistCategoryCard.swift */; };
 		CD2228AEDF0203CCBF58C191 /* GatherDNACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAE39E6577405CC8EB2684 /* GatherDNACard.swift */; };
+		DC5E8F9973115BB3DED4B72C /* CartSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513F2A51AFE4E5256A2A150 /* CartSummaryView.swift */; };
 		DF83513BBC8D970621340F85 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B299CECC27DD626D4D999 /* ProfileView.swift */; };
 		E0F0CC873C39445588277267 /* SmartFridgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5DA176ABDFC34CDEEC0C88 /* SmartFridgeViewModel.swift */; };
 		E10BF653D8CB047BACC2DD03 /* RestockDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67641411AA277966B401FAB3 /* RestockDashboardView.swift */; };
@@ -88,6 +90,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04492CC1B92CB78E495F7FC1 /* PromptBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptBuilder.swift; sourceTree = "<group>"; };
 		06B03D142447CCFFB89F3821 /* AnimatedReasoningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedReasoningView.swift; sourceTree = "<group>"; };
 		0C116999A7BA56AB5606025C /* AIInsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIInsightsView.swift; sourceTree = "<group>"; };
 		0C30D092DB4F757F84F4E850 /* Gather.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Gather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +124,7 @@
 		4DA470B9B6F1635D47B6F8BD /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		4E8FDF51428B9406529BA136 /* SmartFridgeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFridgeCoordinator.swift; sourceTree = "<group>"; };
 		538C393B5E6E4681186D5F82 /* SettlementRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettlementRow.swift; sourceTree = "<group>"; };
+		5996E7459623DBE35C3408B3 /* AIReasoningCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIReasoningCardView.swift; sourceTree = "<group>"; };
 		5DF2080FE529AF9AD88F83B9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		6247ECB09579CB7B4A9B255F /* OccasionSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccasionSelectionView.swift; sourceTree = "<group>"; };
 		62FFADE62C26B69E11512FFE /* ExpenseHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseHomeView.swift; sourceTree = "<group>"; };
@@ -131,7 +135,6 @@
 		6A5E619E35D8B2FA6932CD88 /* BannerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCardView.swift; sourceTree = "<group>"; };
 		76ED53118954B52E58E11F71 /* ActivityFeedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFeedRow.swift; sourceTree = "<group>"; };
 		7A9B299CECC27DD626D4D999 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		7E62F392A698046DF62B86E2 /* CelebrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationPlan.swift; sourceTree = "<group>"; };
 		812496FE08A85BACC0DFDAB5 /* TopDealCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDealCardView.swift; sourceTree = "<group>"; };
 		821A808C75A0AA4AE30E6483 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		89348685E37E6D70245A8706 /* PlanningAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningAnimationView.swift; sourceTree = "<group>"; };
@@ -140,6 +143,7 @@
 		8DE3EB3179366CD794A1EA9E /* SmartFridgeWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFridgeWelcomeView.swift; sourceTree = "<group>"; };
 		91B87A77BB3D86139ACDF1F4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		93D17BC863B5585D6D88791B /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		9513F2A51AFE4E5256A2A150 /* CartSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartSummaryView.swift; sourceTree = "<group>"; };
 		96E25F8C8F4F0D6150178434 /* TimelineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRow.swift; sourceTree = "<group>"; };
 		96FB63D987589E8A378887CE /* HomeCommandHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCommandHeaderView.swift; sourceTree = "<group>"; };
 		98A8D88828E97D5C409ACB6C /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
@@ -161,8 +165,8 @@
 		C05F0601982A7CA04E0E1B24 /* PlanningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewModel.swift; sourceTree = "<group>"; };
 		D264308283106E2557578B6F /* AIInsightCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIInsightCardView.swift; sourceTree = "<group>"; };
 		DACD318B776858F55D49F5BE /* InviteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCard.swift; sourceTree = "<group>"; };
-		E34932DBB86FD0C2CBAE39BE /* ChecklistCategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistCategoryCard.swift; sourceTree = "<group>"; };
 		E8AD547CD208FB703FA8CD39 /* ExpenseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseModels.swift; sourceTree = "<group>"; };
+		F1A5A5C8A7071E6A0BFE9D15 /* OccasionPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccasionPlan.swift; sourceTree = "<group>"; };
 		F239477079701B13600A93BB /* ExpenseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCoordinator.swift; sourceTree = "<group>"; };
 		FBB5474449B5F580E69A6D51 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		FC2239DD6A1F3BB3D115F947 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
@@ -213,12 +217,12 @@
 			isa = PBXGroup;
 			children = (
 				91B87A77BB3D86139ACDF1F4 /* Category.swift */,
-				7E62F392A698046DF62B86E2 /* CelebrationPlan.swift */,
 				E8AD547CD208FB703FA8CD39 /* ExpenseModels.swift */,
 				FC2239DD6A1F3BB3D115F947 /* Feature.swift */,
 				AC3538092710C880E05E4D71 /* FridgeModels.swift */,
 				9BB11A12B7852B2F3E8DDA68 /* HomeModels.swift */,
 				24434474EFD3C6C10A363A24 /* Occasion.swift */,
+				F1A5A5C8A7071E6A0BFE9D15 /* OccasionPlan.swift */,
 				5DF2080FE529AF9AD88F83B9 /* Product.swift */,
 				28792BF9C371E8936B6A47CF /* ProfileModels.swift */,
 			);
@@ -228,9 +232,9 @@
 		50FD56FD6B231F878FACFF93 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5996E7459623DBE35C3408B3 /* AIReasoningCardView.swift */,
 				6A5E619E35D8B2FA6932CD88 /* BannerCardView.swift */,
 				BBB65B8388B49FDAD31B8ED7 /* CategoryRowView.swift */,
-				E34932DBB86FD0C2CBAE39BE /* ChecklistCategoryCard.swift */,
 				351ED8EA7C7F88E02074E936 /* FeatureCardView.swift */,
 				A4895A4D1A0C8B20AFC20700 /* FilterChip.swift */,
 				BA9F9D163804E6BFA231D9DA /* HeaderView.swift */,
@@ -316,6 +320,7 @@
 				22E2A7FF56D2A96EE480BC2A /* FoundationModelService.swift */,
 				6558E8633E5F6D90975828D5 /* MockDataService.swift */,
 				FFB8C920DB2EE5BE9AAACC4D /* PantryAnalysisService.swift */,
+				04492CC1B92CB78E495F7FC1 /* PromptBuilder.swift */,
 				1F691447B8112D29C264E22A /* SplitCalculationService.swift */,
 			);
 			path = Services;
@@ -347,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				389E5D2807082E52767A4662 /* AIPlanView.swift */,
+				9513F2A51AFE4E5256A2A150 /* CartSummaryView.swift */,
 				1BD9B8C66A4C0008E52902B9 /* EventDetailsView.swift */,
 				17BC140926809D4132FE8FCF /* HomeView.swift */,
 				28FC14E733B23D2E946F53AC /* MainTabView.swift */,
@@ -383,7 +389,7 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		"TEMP_DEDC290B-28C3-428D-B4EF-BB71AC7257D6" /* Resources */ = {
+		"TEMP_FF071E7B-83BD-4A04-AE03-B541C583D1E0" /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -446,14 +452,14 @@
 				9792D2581E719E61EFE83007 /* AIInsightCardView.swift in Sources */,
 				C3EAE6A431B7238FAE50D83B /* AIInsightsView.swift in Sources */,
 				7BE5A0C1967E8776BD01DFDD /* AIPlanView.swift in Sources */,
+				408AED38DCB86E45F022C043 /* AIReasoningCardView.swift in Sources */,
 				7F2A1BD64191FF8BFC26D275 /* AISplitAnalysisView.swift in Sources */,
 				5FF205A1988DDC402A8714AD /* ActivityFeedRow.swift in Sources */,
 				545346BE6A386E0C4A0561EB /* AnimatedReasoningView.swift in Sources */,
 				4D7A310FD22343B2CCA4486E /* BannerCardView.swift in Sources */,
+				DC5E8F9973115BB3DED4B72C /* CartSummaryView.swift in Sources */,
 				1E8D26214C518129C2CE6546 /* Category.swift in Sources */,
 				5B4C9ABF7FBECA6FBBE28BD2 /* CategoryRowView.swift in Sources */,
-				96A93A97E1F2FB1D09C49D55 /* CelebrationPlan.swift in Sources */,
-				CCC335407127B7BE38C86D53 /* ChecklistCategoryCard.swift in Sources */,
 				28FD494C9F922D0DCC149E1D /* CheckoutConfirmationView.swift in Sources */,
 				74DE636E00C9F043E64498BF /* CheckoutSummaryView.swift in Sources */,
 				890C6430759DE7F2255ECBB7 /* Color+Extensions.swift in Sources */,
@@ -484,6 +490,7 @@
 				44F72DCAFEC4392B083B4CB3 /* MockDataService.swift in Sources */,
 				76DEE6EC058E1A1A22E01578 /* MyFamilyCard.swift in Sources */,
 				A3201EB76C4164CE152F6733 /* Occasion.swift in Sources */,
+				61DF0F43695467980364AAA1 /* OccasionPlan.swift in Sources */,
 				C638ED32958182CB5B8FFD12 /* OccasionPlannerCoordinator.swift in Sources */,
 				4F0CE8BEC9D07D1245D2D788 /* OccasionSelectionView.swift in Sources */,
 				C5B0D08EDB6BE35D144C2BA6 /* OccasionTypeCard.swift in Sources */,
@@ -500,6 +507,7 @@
 				BDD5005EABBAE78BCA2FAC58 /* ProfileModels.swift in Sources */,
 				DF83513BBC8D970621340F85 /* ProfileView.swift in Sources */,
 				A46B17903BDB8F3920FA6042 /* ProfileViewModel.swift in Sources */,
+				3766949A05E067B2D23F243E /* PromptBuilder.swift in Sources */,
 				BB8B7512A1832E1E37BE5FFF /* QuickActionsRow.swift in Sources */,
 				3BDD89F86EEB54B393A00B0F /* RecipeSuggestionCard.swift in Sources */,
 				3F543DCA7EAC299198D51075 /* RecommendationsGrid.swift in Sources */,

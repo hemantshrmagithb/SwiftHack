@@ -36,7 +36,7 @@ struct AISplitAnalysisView: View {
                 .padding(.bottom, 16)
                 
                 VStack(spacing: 12) {
-                    Text("Finding the fairest\\nsplit...")
+                    Text("Finding the fairest\nsplit...")
                         .font(.system(size: 28, weight: .bold))
                         .multilineTextAlignment(.center)
                         .foregroundColor(.primaryText)

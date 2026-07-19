@@ -42,7 +42,7 @@ struct OccasionWelcomeView: View {
             }
             .padding(.bottom, 40)
             
-            Text("Let's plan your\\nnext celebration.")
+            Text("Let's plan your\nnext celebration.")
                 .font(.system(size: 32, weight: .bold))
                 .multilineTextAlignment(.center)
                 .foregroundColor(.primaryText)
@@ -57,9 +57,7 @@ struct OccasionWelcomeView: View {
             Spacer()
             
             Button(action: {
-                withAnimation(.spring) {
-                    viewModel.nextStep()
-                }
+                viewModel.path.append(.selection)
             }) {
                 Text("Start Planning")
                     .font(.headline)

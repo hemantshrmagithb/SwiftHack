@@ -3,6 +3,8 @@ import SwiftUI
 struct CreateGroupView: View {
     @Bindable var viewModel: ExpenseViewModel
     @FocusState private var isFocused: Bool
+    @State private var showInviteAlert = false
+    @State private var inviteMethod = ""
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -74,11 +76,20 @@ struct CreateGroupView: View {
                         .padding(.horizontal, 24)
                     
                     VStack(spacing: 0) {
-                        InviteCard(title: "Share Link", subtitle: "Send via Messages, Mail, or WhatsApp", iconSystemName: "link") {}
+                        InviteCard(title: "Share Link", subtitle: "Send via Messages, Mail, or WhatsApp", iconSystemName: "link") {
+                            inviteMethod = "Share Link"
+                            showInviteAlert = true
+                        }
                         Divider().padding(.leading, 56)
-                        InviteCard(title: "Show QR Code", subtitle: "Let someone scan from your screen", iconSystemName: "qrcode") {}
+                        InviteCard(title: "Show QR Code", subtitle: "Let someone scan from your screen", iconSystemName: "qrcode") {
+                            inviteMethod = "QR Code"
+                            showInviteAlert = true
+                        }
                         Divider().padding(.leading, 56)
-                        InviteCard(title: "Nearby Share", subtitle: "Find people physically close to you", iconSystemName: "antenna.radiowaves.left.and.right") {}
+                        InviteCard(title: "Nearby Share", subtitle: "Find people physically close to you", iconSystemName: "antenna.radiowaves.left.and.right") {
+                            inviteMethod = "Nearby Share"
+                            showInviteAlert = true
+                        }
                     }
                     .padding(.horizontal, 24)
                     .padding(.vertical, 8)
@@ -104,6 +115,11 @@ struct CreateGroupView: View {
         }
         .onAppear {
             isFocused = true
+        }
+        .alert("Invite via \(inviteMethod)", isPresented: $showInviteAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("This invite method will be available when your group is created.")
         }
     }
 }
