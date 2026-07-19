@@ -14,7 +14,7 @@ struct SettlementSummaryView: View {
                             .font(.system(size: 32, weight: .bold))
                             .foregroundColor(.primaryText)
                         
-                        Text("Here is the breakdown of your latest gathering.")
+                        Text("Here is the breakdown of your latest blinkZoing.")
                             .font(.body)
                             .multilineTextAlignment(.center)
                             .foregroundColor(.secondaryText)
@@ -110,7 +110,7 @@ struct SettlementSummaryView: View {
                         .foregroundColor(Color(UIColor.systemBackground))
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
-                        .background(Color.gatherGreen)
+                        .background(Color.blinkZoGreen)
                         .cornerRadius(12)
                 }
                 

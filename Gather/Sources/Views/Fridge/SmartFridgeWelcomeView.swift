@@ -12,7 +12,7 @@ struct SmartFridgeWelcomeView: View {
                     .edgesIgnoringSafeArea(.top)
                 
                 // This would be replaced by the actual kitchen image, using a placeholder gradient for now
-                LinearGradient(gradient: Gradient(colors: [Color.gatherGreen.opacity(0.2), Color.gatherLightPink]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                LinearGradient(gradient: Gradient(colors: [Color.blinkZoGreen.opacity(0.2), Color.blinkZoLightPink]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .edgesIgnoringSafeArea(.top)
                     .frame(maxHeight: .infinity)
                 

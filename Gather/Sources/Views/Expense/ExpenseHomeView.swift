@@ -60,7 +60,7 @@ struct ExpenseHomeView: View {
                         .foregroundColor(Color(UIColor.systemBackground))
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
-                        .background(Color.gatherGreen)
+                        .background(Color.blinkZoGreen)
                         .cornerRadius(12)
                 }
                 

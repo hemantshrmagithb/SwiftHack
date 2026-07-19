@@ -23,7 +23,7 @@ struct CategoryRowView: View {
                                     .foregroundColor(.white)
                                     .padding(.horizontal, 4)
                                     .padding(.vertical, 2)
-                                    .background(Color.gatherPink)
+                                    .background(Color.blinkZoPink)
                                     .cornerRadius(4)
                                     .offset(x: 10, y: -5)
                             }

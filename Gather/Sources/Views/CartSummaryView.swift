@@ -65,7 +65,7 @@ struct CartSummaryView: View {
                     // Blinkit Style Delivery Banner
                     HStack(spacing: 12) {
                         Image(systemName: "clock.fill")
-                            .foregroundColor(.gatherOrange)
+                            .foregroundColor(.blinkZoOrange)
                         VStack(alignment: .leading) {
                             Text("Delivery in 10 minutes")
                                 .font(.subheadline).bold()
@@ -76,7 +76,7 @@ struct CartSummaryView: View {
                         Spacer()
                     }
                     .padding()
-                    .background(Color.gatherOrange.opacity(0.1))
+                    .background(Color.blinkZoOrange.opacity(0.1))
                     .cornerRadius(12)
                     .padding(.horizontal)
                     
@@ -127,7 +127,7 @@ struct CartSummaryView: View {
                             Text("Delivery Fee")
                             Spacer()
                             Text("FREE")
-                                .foregroundColor(.gatherGreen)
+                                .foregroundColor(.blinkZoGreen)
                                 .bold()
                         }
                         .font(.subheadline)
@@ -198,7 +198,7 @@ struct CartSummaryView: View {
                     }
                     .foregroundColor(Color(UIColor.systemBackground))
                     .padding()
-                    .background(totalPrice > 0 ? Color.gatherGreen : Color.gray)
+                    .background(totalPrice > 0 ? Color.blinkZoGreen : Color.gray)
                     .cornerRadius(16)
                 }
                 .disabled(isPlacingOrder || totalPrice <= 0)

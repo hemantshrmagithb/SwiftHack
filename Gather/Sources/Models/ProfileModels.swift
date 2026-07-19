@@ -7,7 +7,7 @@ struct ProfileUser: Identifiable {
     let name: String
     let imageName: String // "person.crop.circle" or actual image
     let memberSince: Int
-    let hasGatherPlus: Bool
+    let hasBlinkZoPlus: Bool
     let healthyLivingScore: Int
 }
 
@@ -57,8 +57,8 @@ struct FamilyMember: Identifiable {
     }
 }
 
-// MARK: - Gather DNA Model
-struct GatherDNA: Identifiable {
+// MARK: - BlinkZo DNA Model
+struct BlinkZoDNA: Identifiable {
     let id = UUID()
     let title: String
     let iconSystemName: String
@@ -102,7 +102,7 @@ struct OrderHistoryItem: Identifiable {
             case .occasion: return Color.purple
             case .splitGroup: return Color.blue
             case .restock: return Color.green
-            case .normal: return Color.gatherPink
+            case .normal: return Color.blinkZoPink
             }
         }
     }

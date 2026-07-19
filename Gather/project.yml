@@ -1,10 +1,10 @@
-name: Gather
+name: BlinkZo
 options:
-  bundleIdPrefix: com.gather
+  bundleIdPrefix: com.blinkZo
   deploymentTarget:
     iOS: 17.0
 targets:
-  Gather:
+  BlinkZo:
     type: application
     platform: iOS
     sources:

@@ -22,20 +22,20 @@ struct OccasionWelcomeView: View {
             // We use a beautiful combination of shapes and SF Symbols to create a premium feel
             ZStack {
                 Circle()
-                    .fill(Color.gatherLightPink)
+                    .fill(Color.blinkZoLightPink)
                     .frame(width: 250, height: 250)
                 
                 Image(systemName: "gift.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 100, height: 100)
-                    .foregroundColor(.gatherPink)
-                    .shadow(color: Color.gatherPink.opacity(0.3), radius: 15, x: 0, y: 10)
+                    .foregroundColor(.blinkZoPink)
+                    .shadow(color: Color.blinkZoPink.opacity(0.3), radius: 15, x: 0, y: 10)
                 
                 // Confetti
                 ForEach(0..<10) { i in
                     Circle()
-                        .fill(i % 2 == 0 ? Color.gatherGreen : Color.yellow)
+                        .fill(i % 2 == 0 ? Color.blinkZoGreen : Color.yellow)
                         .frame(width: 8, height: 8)
                         .offset(x: CGFloat.random(in: -100...100), y: CGFloat.random(in: -100...100))
                 }
@@ -64,7 +64,7 @@ struct OccasionWelcomeView: View {
                     .foregroundColor(Color(UIColor.systemBackground))
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
-                    .background(Color.gatherGreen)
+                    .background(Color.blinkZoGreen)
                     .cornerRadius(30)
             }
             .padding(.horizontal, 24)

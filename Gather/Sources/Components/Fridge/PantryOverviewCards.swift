@@ -34,7 +34,7 @@ struct FreshItemsCard: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(height: 120)
-                    .foregroundColor(.gatherGreen)
+                    .foregroundColor(.blinkZoGreen)
                     .padding()
                 
                 Button(action: {}) {
@@ -54,7 +54,7 @@ struct FreshItemsCard: View {
             .frame(maxWidth: .infinity)
         }
         .padding(24)
-        .background(Color.gatherGreen.opacity(0.05))
+        .background(Color.blinkZoGreen.opacity(0.05))
         .cornerRadius(24)
     }
 }
@@ -109,7 +109,7 @@ struct ExpiringSoonCard: View {
             }
         }
         .padding(24)
-        .background(Color.gatherLightPink)
+        .background(Color.blinkZoLightPink)
         .cornerRadius(24)
     }
 }

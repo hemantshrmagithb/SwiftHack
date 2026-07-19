@@ -65,7 +65,7 @@ struct AISplitAnalysisView: View {
                                 .cornerRadius(2)
                             
                             Rectangle()
-                                .fill(Color.gatherGreen)
+                                .fill(Color.blinkZoGreen)
                                 .frame(width: geometry.size.width * progress, height: 4)
                                 .cornerRadius(2)
                         }

@@ -54,7 +54,7 @@ struct OccasionSelectionView: View {
                         .foregroundColor(Color(UIColor.systemBackground))
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
-                        .background(viewModel.selectedOccasionType == nil ? Color.gray.opacity(0.5) : Color.gatherGreen)
+                        .background(viewModel.selectedOccasionType == nil ? Color.gray.opacity(0.5) : Color.blinkZoGreen)
                         .cornerRadius(30)
                 }
                 .disabled(viewModel.selectedOccasionType == nil)

@@ -35,7 +35,7 @@ struct RecipeSuggestionCard: View {
                 VStack(alignment: .leading, spacing: 6) {
                     HStack(alignment: .top, spacing: 6) {
                         Image(systemName: "checkmark.circle")
-                            .foregroundColor(.gatherGreen)
+                            .foregroundColor(.blinkZoGreen)
                             .font(.caption)
                             .padding(.top, 2)
                         Text(recipe.availableIngredients.joined(separator: ", "))

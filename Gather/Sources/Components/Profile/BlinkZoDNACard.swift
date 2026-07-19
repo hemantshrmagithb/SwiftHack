@@ -1,11 +1,11 @@
 import SwiftUI
 
-struct GatherDNACard: View {
-    let traits: [GatherDNA]
+struct BlinkZoDNACard: View {
+    let traits: [BlinkZoDNA]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("My Gather DNA")
+            Text("My BlinkZo DNA")
                 .font(.title3)
                 .fontWeight(.bold)
                 .foregroundColor(.primaryText)

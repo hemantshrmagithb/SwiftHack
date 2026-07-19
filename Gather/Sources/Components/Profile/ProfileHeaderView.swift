@@ -39,10 +39,10 @@ struct ProfileHeaderView: View {
             }
             
             HStack(spacing: 12) {
-                if user.hasGatherPlus {
+                if user.hasBlinkZoPlus {
                     HStack(spacing: 6) {
                         Image(systemName: "star.circle.fill")
-                        Text("Gather Plus")
+                        Text("BlinkZo Plus")
                             .fontWeight(.medium)
                     }
                     .font(.caption)
@@ -59,10 +59,10 @@ struct ProfileHeaderView: View {
                         .fontWeight(.medium)
                 }
                 .font(.caption)
-                .foregroundColor(.gatherGreen)
+                .foregroundColor(.blinkZoGreen)
                 .padding(.horizontal, 16)
                 .padding(.vertical, 10)
-                .background(Color.gatherGreen.opacity(0.1))
+                .background(Color.blinkZoGreen.opacity(0.1))
                 .cornerRadius(20)
             }
         }

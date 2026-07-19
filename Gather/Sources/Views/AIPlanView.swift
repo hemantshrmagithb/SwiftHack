@@ -125,7 +125,7 @@ struct AIPlanView: View {
                             ForEach(plan.checklist) { item in
                                 HStack(alignment: .top, spacing: 12) {
                                     Image(systemName: item.isEssential ? "exclamationmark.circle.fill" : "circle")
-                                        .foregroundColor(item.isEssential ? .gatherOrange : .secondaryText)
+                                        .foregroundColor(item.isEssential ? .blinkZoOrange : .secondaryText)
                                     Text(item.task)
                                         .font(.subheadline)
                                     Spacer()
@@ -168,7 +168,7 @@ struct AIPlanView: View {
                         ForEach(plan.warnings, id: \.self) { warning in
                             HStack(alignment: .top, spacing: 16) {
                                 Image(systemName: "exclamationmark.triangle")
-                                    .foregroundColor(.gatherOrange)
+                                    .foregroundColor(.blinkZoOrange)
                                 Text(warning)
                                     .font(.subheadline)
                                 Spacer()
@@ -180,7 +180,7 @@ struct AIPlanView: View {
                         
                         HStack(alignment: .top, spacing: 16) {
                             Image(systemName: "leaf")
-                                .foregroundColor(.gatherGreen)
+                                .foregroundColor(.blinkZoGreen)
                             Text(plan.summary.wasteReductionTip)
                                 .font(.subheadline)
                             Spacer()
@@ -250,7 +250,7 @@ struct AIPlanView: View {
                             .foregroundColor(Color(UIColor.systemBackground))
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
-                            .background(Color.gatherGreen)
+                            .background(Color.blinkZoGreen)
                             .cornerRadius(30)
                     }
                 }

@@ -6,11 +6,11 @@ struct BannerCardView: View {
             Text("BIG")
                 .font(Typography.title3)
                 .fontWeight(.light)
-                .foregroundColor(.gatherPink)
+                .foregroundColor(.blinkZoPink)
             
             Text("Beauty Bash")
                 .font(Typography.promoHeader)
-                .foregroundColor(.gatherPink)
+                .foregroundColor(.blinkZoPink)
             
             Text("17th-19th JULY")
                 .font(.caption)
@@ -18,12 +18,12 @@ struct BannerCardView: View {
                 .foregroundColor(.white)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 4)
-                .background(Color.gatherPink)
+                .background(Color.blinkZoPink)
                 .cornerRadius(12)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 24)
-        .background(Color.gatherLightPink)
+        .background(Color.blinkZoLightPink)
         .cornerRadius(16)
     }
 }

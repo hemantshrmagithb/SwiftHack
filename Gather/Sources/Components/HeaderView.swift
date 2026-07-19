@@ -28,7 +28,7 @@ struct HeaderView: View {
                 // Wallet button
                 VStack(spacing: 2) {
                     Image(systemName: "banknote.fill")
-                        .foregroundColor(.gatherGreen)
+                        .foregroundColor(.blinkZoGreen)
                         .font(.system(size: 20))
                     Text("₹0")
                         .font(.caption)

@@ -7,7 +7,7 @@ struct AIReasoningCardView: View {
         VStack(alignment: .leading, spacing: 16) {
             HStack {
                 Image(systemName: "sparkles")
-                    .foregroundColor(.gatherPink)
+                    .foregroundColor(.blinkZoPink)
                 Text("AI Reasoning")
                     .font(.headline)
                     .fontWeight(.bold)
@@ -22,7 +22,7 @@ struct AIReasoningCardView: View {
                 ForEach(reasoningItems) { item in
                     HStack(alignment: .top, spacing: 12) {
                         Image(systemName: "arrow.turn.down.right")
-                            .foregroundColor(.gatherPink)
+                            .foregroundColor(.blinkZoPink)
                             .font(.subheadline)
                             .padding(.top, 2)
                         

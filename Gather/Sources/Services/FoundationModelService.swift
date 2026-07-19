@@ -96,7 +96,7 @@ class FoundationModelService: FoundationModelServiceProtocol {
             shoppingCategories: shoppingCategories,
             totalEstimatedBudget: totalEstimatedBudget,
             warnings: [
-                isLargeEvent ? "With \(totalGuests) guests, ensure you have enough seating and consider a buffet style." : "Intimate gathering: focus on high-quality ingredients.",
+                isLargeEvent ? "With \(totalGuests) guests, ensure you have enough seating and consider a buffet style." : "Intimate blinkZoing: focus on high-quality ingredients.",
                 totalEstimatedBudget > template.budget ? "Your estimated cart is slightly over your stated budget." : "You are well within your budget."
             ],
             premiumUpgrades: [

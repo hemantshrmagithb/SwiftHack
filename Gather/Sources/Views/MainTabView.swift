@@ -40,7 +40,7 @@ struct MainTabView: View {
                 }
                 .tag(4)
         }
-        .accentColor(.gatherPink)
+        .accentColor(.blinkZoPink)
     }
 }
 

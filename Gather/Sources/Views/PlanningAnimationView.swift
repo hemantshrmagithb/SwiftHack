@@ -13,13 +13,13 @@ struct PlanningAnimationView: View {
             // Faint glowing animation rings
             ZStack {
                 Circle()
-                    .stroke(Color.gatherPink.opacity(0.1), lineWidth: 40)
+                    .stroke(Color.blinkZoPink.opacity(0.1), lineWidth: 40)
                     .frame(width: 250, height: 250)
                     .scaleEffect(scale)
                     .opacity(opacity)
                 
                 Circle()
-                    .stroke(Color.gatherGreen.opacity(0.05), lineWidth: 60)
+                    .stroke(Color.blinkZoGreen.opacity(0.05), lineWidth: 60)
                     .frame(width: 350, height: 350)
                     .scaleEffect(scale * 1.2)
                     .opacity(opacity * 0.8)
@@ -34,7 +34,7 @@ struct PlanningAnimationView: View {
             VStack(spacing: 24) {
                 Image(systemName: "sparkle.magnifyingglass")
                     .font(.system(size: 40))
-                    .foregroundColor(.gatherPink)
+                    .foregroundColor(.blinkZoPink)
                 
                 VStack(spacing: 8) {
                     Text("AI is Reasoning")

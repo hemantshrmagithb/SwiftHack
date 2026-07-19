@@ -51,7 +51,7 @@ struct JourneyResumeCard: View {
                         .frame(height: 4)
                     
                     Capsule()
-                        .fill(Color.gatherGreen)
+                        .fill(Color.blinkZoGreen)
                         .frame(width: geometry.size.width * journey.progressPercentage, height: 4)
                 }
             }

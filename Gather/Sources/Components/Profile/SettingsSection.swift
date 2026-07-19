@@ -17,7 +17,7 @@ struct SettingsSection: View {
                     Button(action: {}) {
                         Text("View All")
                             .font(.subheadline)
-                            .foregroundColor(.gatherPink)
+                            .foregroundColor(.blinkZoPink)
                     }
                 }
                 .padding(.horizontal, 24)
@@ -67,7 +67,7 @@ struct SettingsSection: View {
             
             // Settings Links
             VStack(spacing: 0) {
-                settingsLink(title: "Favorites", icon: "heart", color: .gatherPink)
+                settingsLink(title: "Favorites", icon: "heart", color: .blinkZoPink)
                 Divider().padding(.leading, 56)
                 settingsLink(title: "Connected Devices", icon: "applewatch", color: .primaryText)
                 Divider().padding(.leading, 56)

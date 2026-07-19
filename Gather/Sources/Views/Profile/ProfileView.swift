@@ -32,7 +32,7 @@ struct ProfileView: View {
                                     .padding(.horizontal, 24)
                             }
                             
-                            GatherDNACard(traits: viewModel.dnaTraits)
+                            BlinkZoDNACard(traits: viewModel.dnaTraits)
                             
                             MyFamilyCard(householdData: household)
                             

@@ -8,7 +8,7 @@ struct MyFamilyCard: View {
             HStack {
                 HStack(spacing: 8) {
                     Image(systemName: "house.fill")
-                        .foregroundColor(.gatherPink)
+                        .foregroundColor(.blinkZoPink)
                     Text("My Family & Home")
                         .font(.title3)
                         .fontWeight(.bold)

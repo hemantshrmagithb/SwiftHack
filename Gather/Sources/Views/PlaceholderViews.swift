@@ -10,7 +10,7 @@ struct PlaceholderView: View {
             VStack(spacing: 24) {
                 Image(systemName: iconSystemName)
                     .font(.system(size: 80))
-                    .foregroundColor(.gatherPink)
+                    .foregroundColor(.blinkZoPink)
                 
                 Text(title)
                     .font(.title)

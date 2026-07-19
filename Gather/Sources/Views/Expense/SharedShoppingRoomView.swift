@@ -33,14 +33,14 @@ struct SharedShoppingRoomView: View {
                             }
                             
                             HStack(spacing: 6) {
-                                Circle().fill(Color.gatherGreen).frame(width: 8, height: 8)
+                                Circle().fill(Color.blinkZoGreen).frame(width: 8, height: 8)
                                 Text("3 active now")
                                     .font(.caption)
                                     .foregroundColor(.primaryText)
                             }
                             .padding(.horizontal, 12)
                             .padding(.vertical, 6)
-                            .background(Color.gatherGreen.opacity(0.1))
+                            .background(Color.blinkZoGreen.opacity(0.1))
                             .cornerRadius(16)
                         }
                     }
@@ -138,7 +138,7 @@ struct SharedShoppingRoomView: View {
                             .foregroundColor(Color(UIColor.systemBackground))
                             .padding(.horizontal, 24)
                             .padding(.vertical, 12)
-                            .background(Color.gatherGreen)
+                            .background(Color.blinkZoGreen)
                             .cornerRadius(20)
                     }
                 }

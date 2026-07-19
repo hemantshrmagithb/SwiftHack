@@ -71,7 +71,7 @@ struct CheckoutSummaryView: View {
                                 Spacer()
                                 Text(String(format: "-₹%.2f", abs(summary.suggestedSavings)))
                                     .fontWeight(.bold)
-                                    .foregroundColor(.gatherGreen)
+                                    .foregroundColor(.blinkZoGreen)
                             }
                             Divider()
                             

@@ -12,13 +12,13 @@ struct CheckoutConfirmationView: View {
             
             ZStack {
                 Circle()
-                    .fill(Color.gatherGreen.opacity(0.1))
+                    .fill(Color.blinkZoGreen.opacity(0.1))
                     .frame(width: 140, height: 140)
                     .scaleEffect(animate ? 1.2 : 0.8)
                     .opacity(animate ? 0 : 1)
                 
                 Circle()
-                    .fill(Color.gatherGreen)
+                    .fill(Color.blinkZoGreen)
                     .frame(width: 80, height: 80)
                 
                 Image(systemName: "checkmark")

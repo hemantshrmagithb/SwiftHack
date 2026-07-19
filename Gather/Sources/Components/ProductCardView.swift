@@ -11,7 +11,7 @@ struct ProductCardView: View {
                     .foregroundColor(.white)
                     .padding(.horizontal, 8)
                     .padding(.vertical, 4)
-                    .background(Color.gatherPink.opacity(0.8))
+                    .background(Color.blinkZoPink.opacity(0.8))
                     .cornerRadius(4)
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .padding([.top, .trailing], 8)

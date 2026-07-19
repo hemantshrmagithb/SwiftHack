@@ -24,7 +24,7 @@ struct FeatureCardView: View {
                             .foregroundColor(.white)
                             .padding(.horizontal, 16)
                             .padding(.vertical, 8)
-                            .background(Color.gatherGreen)
+                            .background(Color.blinkZoGreen)
                             .cornerRadius(20)
                     }
                 } else if feature.buttonActionType == .secondary {

@@ -10,12 +10,12 @@ struct AIInsightCardView: View {
                 // Animated AI Icon (using SF symbol and gradient for effect)
                 ZStack {
                     Circle()
-                        .fill(Color.gatherGreen.opacity(0.1))
+                        .fill(Color.blinkZoGreen.opacity(0.1))
                         .frame(width: 44, height: 44)
                     
                     Image(systemName: insight.iconName)
                         .font(.title3)
-                        .foregroundColor(.gatherGreen)
+                        .foregroundColor(.blinkZoGreen)
                 }
                 
                 Text(insight.text)
@@ -33,14 +33,14 @@ struct AIInsightCardView: View {
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
-                    .background(Color.gatherGreen)
+                    .background(Color.blinkZoGreen)
                     .cornerRadius(12)
             }
         }
         .padding(24)
         // Light glassmorphism effect
         .background(
-            LinearGradient(gradient: Gradient(colors: [Color.cardBackground, Color.gatherGreen.opacity(0.05)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [Color.cardBackground, Color.blinkZoGreen.opacity(0.05)]), startPoint: .topLeading, endPoint: .bottomTrailing)
         )
         .cornerRadius(32)
     }

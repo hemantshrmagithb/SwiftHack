@@ -20,12 +20,12 @@ struct OccasionTypeCard: View {
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 24)
-            .background(isSelected ? Color.gatherGreen : Color.cardBackground)
+            .background(isSelected ? Color.blinkZoGreen : Color.cardBackground)
             .cornerRadius(16)
             .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 2)
             .overlay(
                 RoundedRectangle(cornerRadius: 16)
-                    .stroke(isSelected ? Color.gatherGreen : Color.clear, lineWidth: 2)
+                    .stroke(isSelected ? Color.blinkZoGreen : Color.clear, lineWidth: 2)
             )
         }
         .buttonStyle(PlainButtonStyle())

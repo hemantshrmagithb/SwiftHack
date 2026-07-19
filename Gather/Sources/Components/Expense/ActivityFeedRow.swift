@@ -21,9 +21,9 @@ struct ActivityFeedRow: View {
                 if event.action == "is looking at" {
                     // Typing indicator animation could go here, for now static dots
                     HStack(spacing: 2) {
-                        Circle().fill(Color.gatherGreen).frame(width: 6, height: 6)
-                        Circle().fill(Color.gatherGreen).frame(width: 6, height: 6)
-                        Circle().fill(Color.gatherGreen).frame(width: 6, height: 6)
+                        Circle().fill(Color.blinkZoGreen).frame(width: 6, height: 6)
+                        Circle().fill(Color.blinkZoGreen).frame(width: 6, height: 6)
+                        Circle().fill(Color.blinkZoGreen).frame(width: 6, height: 6)
                     }
                     .padding(.top, 2)
                 } else {

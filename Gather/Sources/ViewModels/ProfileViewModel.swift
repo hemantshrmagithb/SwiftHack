@@ -7,7 +7,7 @@ class ProfileViewModel {
     var user: ProfileUser?
     var healthData: HealthDietData?
     var householdData: HouseholdData?
-    var dnaTraits: [GatherDNA] = []
+    var dnaTraits: [BlinkZoDNA] = []
     var smartInsights: [ProfileInsight] = []
     var orderHistory: [OrderHistoryItem] = []
     
@@ -29,7 +29,7 @@ class ProfileViewModel {
                     name: "Good Evening, Arpita",
                     imageName: "person.circle.fill", // Fallback if no actual image
                     memberSince: 2026,
-                    hasGatherPlus: true,
+                    hasBlinkZoPlus: true,
                     healthyLivingScore: 92
                 )
                 
@@ -45,7 +45,7 @@ class ProfileViewModel {
                 )
                 
                 self.householdData = HouseholdData(
-                    address: "123 Gather Street, Mumbai",
+                    address: "123 BlinkZo Street, Mumbai",
                     householdSize: 4,
                     kitchenSize: "Medium",
                     monthlyBudget: 15000,
@@ -60,10 +60,10 @@ class ProfileViewModel {
                 )
                 
                 self.dnaTraits = [
-                    GatherDNA(title: "Planner", iconSystemName: "calendar", color: .purple),
-                    GatherDNA(title: "Healthy Eater", iconSystemName: "leaf", color: .green),
-                    GatherDNA(title: "Budget Conscious", iconSystemName: "banknote", color: .blue),
-                    GatherDNA(title: "Weekend Shopper", iconSystemName: "bag", color: .orange)
+                    BlinkZoDNA(title: "Planner", iconSystemName: "calendar", color: .purple),
+                    BlinkZoDNA(title: "Healthy Eater", iconSystemName: "leaf", color: .green),
+                    BlinkZoDNA(title: "Budget Conscious", iconSystemName: "banknote", color: .blue),
+                    BlinkZoDNA(title: "Weekend Shopper", iconSystemName: "bag", color: .orange)
                 ]
                 
                 self.smartInsights = [

@@ -7,7 +7,7 @@ struct TopDealCardView: View {
         VStack(alignment: .leading, spacing: 12) {
             Text("TOP\nDEALS")
                 .font(.headline)
-                .foregroundColor(.gatherPink)
+                .foregroundColor(.blinkZoPink)
             
             HStack(alignment: .lastTextBaseline) {
                 Text("₹\(product.currentPrice)")
@@ -16,7 +16,7 @@ struct TopDealCardView: View {
                     .foregroundColor(.white)
                     .padding(.horizontal, 8)
                     .padding(.vertical, 4)
-                    .background(Color.gatherPink)
+                    .background(Color.blinkZoPink)
                     .cornerRadius(6)
                 
                 if let original = product.originalPrice {

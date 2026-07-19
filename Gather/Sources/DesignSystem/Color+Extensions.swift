@@ -14,16 +14,16 @@ extension Color {
     static let secondaryText = Color.secondary
     
     // Pink accent for the mockup theme
-    static let gatherPink = Color(hex: "#FF4D85")
-    static let gatherLightPink = Color(UIColor { traitCollection in
+    static let blinkZoPink = Color(hex: "#FF4D85")
+    static let blinkZoLightPink = Color(UIColor { traitCollection in
         return traitCollection.userInterfaceStyle == .dark ? UIColor(hex: "#FF4D85").withAlphaComponent(0.15) : UIColor(hex: "#FFF0F5")
     })
     
     // Green accent
-    static let gatherGreen = Color(hex: "#00C853")
+    static let blinkZoGreen = Color(hex: "#00C853")
     
     // Orange accent
-    static let gatherOrange = Color(hex: "#FF9F0A")
+    static let blinkZoOrange = Color(hex: "#FF9F0A")
 }
 
 // Helper to use hex codes

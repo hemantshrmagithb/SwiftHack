@@ -9,13 +9,13 @@ struct TimelineRow: View {
             // Timeline line and dot
             VStack {
                 Circle()
-                    .fill(Color.gatherGreen)
+                    .fill(Color.blinkZoGreen)
                     .frame(width: 8, height: 8)
                     .padding(.top, 4)
                 
                 if !isLast {
                     Rectangle()
-                        .fill(Color.gatherGreen)
+                        .fill(Color.blinkZoGreen)
                         .frame(width: 2)
                 }
             }

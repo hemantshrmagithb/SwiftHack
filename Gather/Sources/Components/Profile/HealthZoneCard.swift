@@ -8,7 +8,7 @@ struct HealthZoneCard: View {
             HStack {
                 HStack(spacing: 8) {
                     Image(systemName: "waveform.path.ecg")
-                        .foregroundColor(.gatherGreen)
+                        .foregroundColor(.blinkZoGreen)
                     Text("Health & Diet")
                         .font(.title3)
                         .fontWeight(.bold)
@@ -67,7 +67,7 @@ struct HealthZoneCard: View {
                             .frame(height: 8)
                         
                         Capsule()
-                            .fill(Color.gatherGreen)
+                            .fill(Color.blinkZoGreen)
                             .frame(width: geometry.size.width * healthData.fruitVegProgress, height: 8)
                     }
                 }

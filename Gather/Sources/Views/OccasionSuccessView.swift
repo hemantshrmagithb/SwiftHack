@@ -12,13 +12,13 @@ struct OccasionSuccessView: View {
             
             ZStack {
                 Circle()
-                    .fill(Color.gatherPink.opacity(0.1))
+                    .fill(Color.blinkZoPink.opacity(0.1))
                     .frame(width: 140, height: 140)
                     .scaleEffect(animate ? 1.2 : 0.8)
                     .opacity(animate ? 0 : 1)
                 
                 Circle()
-                    .fill(Color.gatherPink)
+                    .fill(Color.blinkZoPink)
                     .frame(width: 80, height: 80)
                 
                 Image(systemName: "party.popper.fill")

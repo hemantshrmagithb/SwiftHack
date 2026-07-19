@@ -3,7 +3,7 @@
 import SwiftUI
 
 @main
-struct GatherApp: App {
+struct BlinkZoApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabView()

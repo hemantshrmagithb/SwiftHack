@@ -15,7 +15,7 @@ struct SmartInsightsGrid: View {
                     HStack {
                         Image(systemName: insight.iconSystemName)
                             .font(.title3)
-                            .foregroundColor(insight.isCurrency ? .primaryText : .gatherGreen)
+                            .foregroundColor(insight.isCurrency ? .primaryText : .blinkZoGreen)
                         Spacer()
                     }
                     
