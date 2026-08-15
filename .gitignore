@@ -49,6 +49,28 @@ playground.xcworkspace
 
 Carthage/Build/
 
+## Build artifacts
+build/
+*.build/
+DerivedData/
+
+## Xcode build files
+*.xcbuildlog
+DeveloperToolsUserData/
+
+## IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+## Dependencies
+Pods/
+.swiftpm/
+.package.resolved
+
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo.
